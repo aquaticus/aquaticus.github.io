@@ -32,12 +32,14 @@ Add the following section to your ESPHome YAML configuration file:
 .. code-block:: yaml
 
    external_components:
-   # SNMP component
+       # SNMP component
        - source: github://aquaticus/esphome@aquaticus-snmp
        components: [ snmp ]
 
-OID
----
+.. _OID:
+
+OID List
+--------
 
 OID (Object Identifier) is an address used to uniquely identify statuses.
 
@@ -126,6 +128,12 @@ CPU details.
 - ``1.3.9999.2.3.0``: Chip model fo ESP32 or core version for ESP8266
 - ``1.3.9999.2.4.0``: Number of CPU cores
 - ``1.3.9999.2.5.0``: ESP32 chip revision or `0` for ESP8266
+
+Testing
+-------
+
+Integration tests are available for ths component: https://github.com/aquaticus/esphome_snmp_tests
+
 
 Network monitoring
 ------------------

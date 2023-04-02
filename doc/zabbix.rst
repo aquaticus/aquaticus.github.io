@@ -197,7 +197,7 @@ Add the following part to ESPHome WiFi component:
 .. code-block:: yaml
 
    external_components:
-   # SNMP component
+      # SNMP component
       - source: github://aquaticus/esphome@aquaticus-snmp
         components: [ snmp ]
       
@@ -253,4 +253,4 @@ You should see a value different than 0.
 List of available OIDs
 ----------------------
 
-To see a full list of objects provided by ESPHome SNMP Component see :doc:`snmp`.
+To see a full list of objects provided by ESPHome SNMP Component see :ref:`OID`.
