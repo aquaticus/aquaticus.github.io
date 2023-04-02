@@ -36,7 +36,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install sphinx sphinx_rtd_theme sphinx-copybutton
+          pip install sphinx sphinx_rtd_theme sphinx-copybutton sphinxext-opengraph
 
       - name: Sphinx build
         run: |
