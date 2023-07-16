@@ -1,11 +1,11 @@
-ESPHome IEC 62056-21 Component
+ESPHome IEC 62056–21 Component
 ==============================
 
 *IEC 62056-21* is an international standard for a protocol to exchange data with utility meters. Mostly for electricity but also water, thermal and other meters. It was previously known as *IEC 61107*.
 
 The ``iec62056`` component allows you to read data from any compatible meter. It requires a *serial port* and *an external optical interface*. Data exchange uses an infrared optical channel. Compatible meters are equipped with a characteristic round metal plate with two opto-elements inside. The protocol could be used with other transport layers, e.g. current loop but the component was tested only with the optical interface.
 
-It supports 4 modes of IEC 62056-21: A, B, C, and D.
+It supports 4 modes of IEC 62056–21: A, B, C, and D. Mode E is not supported.
 
 The component does not support programming. Setting meter configuration parameters requires a secret password which makes it impossible to use by ordinary users.
 
@@ -27,7 +27,7 @@ Add the following code to ESPHome YAML configuration file to reference external 
    external_components:
        # IEC62056 component
        - source: github://aquaticus/esphome@aquaticus-iec62056
-       components: [ iec62056 ]
+         components: [ iec62056 ]
 
 Theory of operation
 -------------------
@@ -35,7 +35,7 @@ Theory of operation
 The component operates in 2 main modes:
 
 * **Bidirectional** communication with a meter. In this mode, a meter sends data only when requested. It requires an IR receiver and transmitter. This is mode A, B and C according to IEC 62056-21.
-* **Unidirectional** communication, where a meter sends data to a probe from time to time. It requires only an IR receiver. In `IEC 62056-21` terminology it is mode D.
+* **Unidirectional** communication, where a meter sends data to a probe from time to time. It requires only an IR receiver. In `IEC 62056–21` terminology it is mode D.
 
 Modes A, B, C
 *************
@@ -48,12 +48,18 @@ If the transmission has failed (bad checksum or invalid format), the component w
 
 If the meter is battery-powered, a special wake-up sequence can be applied. This happens only when :ref:`battery_meter <iec62056_platform_config>` is set to ``True``.
 
-
 Mode D
 ******
 
 For meters operating in mode D, you only need an IR receiver as transmission to a meter is not supported. In this mode, the meter sends data every few seconds without any request. You should configure the serial port to match the meter transmission format. Unlike modes A, B, and C which is detected automatically, Mode D must be enabled manually by setting ``mode_d=True`` in the platform configuration.
 
+Mode E
+******
+
+**This mode is not supported**. Mode E uses binary encoding over HDLC link.
+
+The component try to use mode C for meters reporting mode E. This should work if meter supports both E and C modes.
+For meters supporting only mode E readout is not possible.
 
 OBIS codes
 **********
@@ -63,7 +69,7 @@ The code is formatted like this: ``A-B:C.D.E*F``, where:
 
 * ``A`` - medium: 0=abstract objects, 1=electricity, 6=heat, 7=gas, 8=water
 * ``B`` - channel, 0=no channel available
-* ``C`` - physical value, e.g. current, voltage, temperature.
+* ``C`` - physical value, for example current, voltage, temperature.
 * ``D`` - measurement type, 
 * ``E`` - tariff, 0=total, 1=tariff #1, 2=tariff #2 and so on
 * ``F`` - billing period
@@ -172,7 +178,7 @@ Configuration variables
   Defaults to ``15min``. ``never`` disables updates. In that case, a switch should be used to
   trigger readout. To get continuous readings use a small value like 1s.
 
-- **baud_rate_max** (*Optional*, int): LLimits the maximum transmission speed to the specified value. By default, it is set to ``9600`` as it provides a stable connection. To disable it, set it to ``0``. That way you can use the maximum possible baud rate of ``19200`` if the meter supports it. For ESP8266 use the software UART set to ``4800`` or lower.
+- **baud_rate_max** (*Optional*, int): Limits the maximum transmission speed to the specified value. By default, it is set to ``9600`` as it provides a stable connection. To disable it, set it to ``0``. That way you can use the maximum possible baud rate of ``19200`` if the meter supports it. For ESP8266 use the software UART set to ``4800`` or lower.
 
 - **receive_timeout** (*Optional*, :ref:`esphome:config-time`): Maximum time component waits for data from a meter before reporting transmission error. Defaults to ``3s``.
 
@@ -348,7 +354,7 @@ Configuration variables from  :ref:`Switch <esphome:config-switch>` can be used.
 
 You cannot trigger readout in mode D.
 
-Binary Sensor
+Binary sensor
 *************
 
 Set to ``ON`` when transmission to a meter begins. ``OFF`` when the transmission is finished.
@@ -384,8 +390,8 @@ Troubleshooting
 * If you encounter transmission and BCC checksum errors decrease the baud rate using ``baud_rate_max`` setting.
 * If your device handles multiple sensors that spend a lot of time in the update loop you may need to increase the serial port buffer size. Especially if you note transmission problems when additional sensors are enabled but not when they are disabled.
 
-See Also
+See also
 --------
 
-- `International Standard IEC 62056-21:2002 <https://webstore.iec.ch/publication/6398>`_
-- `International Standard IEC 62056-6-1:2017 <https://webstore.iec.ch/publication/32782>`_
+- `International Standard IEC 62056–21:2002 <https://webstore.iec.ch/publication/6398>`_
+- `International Standard IEC 62056–6–1:2017 <https://webstore.iec.ch/publication/32782>`_
