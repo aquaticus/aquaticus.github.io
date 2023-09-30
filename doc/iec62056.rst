@@ -1,11 +1,11 @@
-ESPHome IEC 62056–21 Component
+ESPHome IEC 62056-21 Component
 ==============================
 
 *IEC 62056-21* is an international standard for a protocol to exchange data with utility meters. Mostly for electricity but also water, thermal and other meters. It was previously known as *IEC 61107*.
 
 The ``iec62056`` component allows you to read data from any compatible meter. It requires a *serial port* and *an external optical interface*. Data exchange uses an infrared optical channel. Compatible meters are equipped with a characteristic round metal plate with two opto-elements inside. The protocol could be used with other transport layers, e.g. current loop but the component was tested only with the optical interface.
 
-It supports 4 modes of IEC 62056–21: A, B, C, and D. Mode E is not supported.
+It supports 4 modes of IEC 62056-21: A, B, C, and D. Mode E is not supported.
 
 The component does not support programming. Setting meter configuration parameters requires a secret password which makes it impossible to use by ordinary users.
 
@@ -26,8 +26,7 @@ Add the following code to ESPHome YAML configuration file to reference external 
 
    external_components:
        # IEC62056 component
-       - source: github://aquaticus/esphome@aquaticus-iec62056
-         components: [ iec62056 ]
+       - source: github://aquaticus/esphome-iec62056
 
 Theory of operation
 -------------------
@@ -35,7 +34,7 @@ Theory of operation
 The component operates in 2 main modes:
 
 * **Bidirectional** communication with a meter. In this mode, a meter sends data only when requested. It requires an IR receiver and transmitter. This is mode A, B and C according to IEC 62056-21.
-* **Unidirectional** communication, where a meter sends data to a probe from time to time. It requires only an IR receiver. In `IEC 62056–21` terminology it is mode D.
+* **Unidirectional** communication, where a meter sends data to a probe from time to time. It requires only an IR receiver. In `IEC 62056-21` terminology it is mode D.
 
 Modes A, B, C
 *************
@@ -102,6 +101,8 @@ Hardware
 To communicate with a meter you must attach an optical interface to the serial port. The interface consists of an infrared LED and phototransistor. In addition, the device must be equipped with a ring magnet to keep it aligned with the meter. 
 
 If the meter operates in unidirectional mode D, only an IR phototransistor is required.
+
+.. _Optical Probe:
 
 Probe
 *****
@@ -393,5 +394,5 @@ Troubleshooting
 See also
 --------
 
-- `International Standard IEC 62056–21:2002 <https://webstore.iec.ch/publication/6398>`_
-- `International Standard IEC 62056–6–1:2017 <https://webstore.iec.ch/publication/32782>`_
+- `International Standard IEC 62056-21:2002 <https://webstore.iec.ch/publication/6398>`_
+- `International Standard IEC 62056-6-1:2017 <https://webstore.iec.ch/publication/32782>`_

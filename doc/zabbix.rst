@@ -3,7 +3,7 @@ ESPHome network monitoring
 
 ESPHome is a popular system to control Espressif ESP8266 and ESP32 devices. This article describes how to monitor multiple devices using a custom ESPHome SNMP component and a popular network monitoring tool.
 
-Thanks to that, you can detect and be informed about anomalous behaviors of your devices, like reboots, low WiFi signal, or lack of free memory.
+Thanks to that, you can detect and be informed about anomalous behaviors of your devices, like reboots, low Wi-Fi signal, or lack of free memory.
 
 SNMP is supported by many applications, but this article discusses integration with the open source tool Zabbix. It is assumed you have Zabbix version 6.4 installed and running.
 
@@ -14,7 +14,7 @@ SNMP is supported by many applications, but this article discusses integration w
 SNMP Component
 --------------
 
-ESPHome does not support SNMP out of the box. But it provides a convenient
+ESPHome doesn't support SNMP out of the box. But it provides a convenient
 way to integrate with external components.
 
 To add SNMP protocol to ESPHome device reference SNMP Component located in https://github.com/aquaticus/esphome, branch ``aquaticus-snmp``.

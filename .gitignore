@@ -1,4 +1,6 @@
-.vscode
-_site/**
-_build/**
-
+.vscode/
+_site/
+_build/
+.styles/
+.vale.ini
+.hypothesis/
