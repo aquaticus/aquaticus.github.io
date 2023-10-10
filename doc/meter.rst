@@ -67,7 +67,7 @@ Bill of materials
 +===================+=====================+================================================+
 | CPU               | Wemos C3 or S2 Mini https://www.wemos.cc/en/latest/                  |
 +-------------------+----------------------------------------------------------------------+
-| Optical interface | PiggyMeter PCB                                                       |
+| Optical interface | PiggyMeter PCB https://www.tindie.com/products/32082/                |
 +-------------------+----------------------------------------------------------------------+
 | 2×pin header 1×4  | 2.54mm raster; plastic part must be 8.5 mm height                    | 
 +-------------------+----------------------------------------------------------------------+
@@ -114,17 +114,23 @@ communicating with a probe via an infrared diode and a phototransistor.
 The interface is connected to one of the serial ports on CPU board. 
 Of course you need VCC and GND too.
 
-Solder 2 pin headers. You must use pin header **8.5 mm** height.
-The design of the case accommodates this height, ensuring a proper fit. 
-If the height exceeds this dimension, closing the lid may pose challenges.
-
-
 .. figure:: images/cpu-and-interface.png
     :align: center
     :scale: 80%
     :figwidth: 100%
     
     Optical interface and CPU board
+
+Solder 2 pin headers. You must use pin header **8.5 mm** height.
+The design of the case accommodates this height, ensuring a proper fit.
+If the height exceeds this dimension, closing the lid may pose challenges.
+
+You can buy assembled interface on Tindie.
+
+.. raw:: html
+
+    <a href="https://www.tindie.com/products/32082/?ref=offsite_badges&utm_source=sellers_aquaticus&utm_medium=badges&utm_campaign=badge_large"><img src="https://d2ss6ovg47m0r5.cloudfront.net/badges/tindie-larges.png" alt="Buy on Tindie" width="200" height="104"></a>
+
 
 Case
 ----
