@@ -36,3 +36,9 @@ This section provides documentation for ESPHome related projects.
    :hidden:
    
    meter
+
+Contact
+-------
+
+| Email: info@aquaticus.info
+| Discord: ``aquaticus.``
