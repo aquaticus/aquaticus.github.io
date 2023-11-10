@@ -17,7 +17,7 @@ SNMP Component
 ESPHome doesn't support SNMP out of the box. But it provides a convenient
 way to integrate with external components.
 
-To add SNMP protocol to ESPHome device reference SNMP Component located in https://github.com/aquaticus/esphome, branch ``aquaticus-snmp``.
+To add SNMP protocol to ESPHome device reference SNMP Component located in https://github.com/aquaticus/esphome-snmp.
 
 Add the following code to your ESPHome YAML configuration file:
 
@@ -28,8 +28,7 @@ Add the following code to your ESPHome YAML configuration file:
 
    # Retrieve SNMP component from github
    external_components:
-      - source: github://aquaticus/esphome@aquaticus-snmp
-        components: [ snmp ]
+      - source: github://aquaticus/esphome-snmp
 
 When uploaded to a board you should see the following message in the
 log:
@@ -183,28 +182,6 @@ one function.
 
 You can do it manually or use the one already modified from the
 repository.
-
-Repository version
-~~~~~~~~~~~~~~~~~~
-
-This is the easiest way. Just add a section to your YAML file and you are
-done.
-
-The version of WiFi component is based on ESPHome ``2023.3.2``
-
-Add the following part to ESPHome WiFi component:
-
-.. code-block:: yaml
-
-   external_components:
-      # SNMP component
-      - source: github://aquaticus/esphome@aquaticus-snmp
-        components: [ snmp ]
-      
-      # Extended WiFi component
-      - source: github://aquaticus/esphome@aquaticus-snmp-wifi
-        components: [ wifi ]
-
 
 Manually modify WiFi component
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

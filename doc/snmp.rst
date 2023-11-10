@@ -33,8 +33,7 @@ Add the following section to your ESPHome YAML configuration file:
 
    external_components:
        # SNMP component
-       - source: github://aquaticus/esphome@aquaticus-snmp
-       components: [ snmp ]
+       - source: github://aquaticus/esphome-snmp
 
 .. _OID:
 
