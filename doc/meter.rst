@@ -13,7 +13,7 @@ read data from an electric meter (or any device with a compatible interface).
 It uses widely available components, open source software and is compatible 
 with popular home automation software, `Home Assistant <https://www.home-assistant.io/>`_.
 
-
+A kit for assembling a functional device is available for purchase on Tindie: `PiggyMeter KIT <https://www.tindie.com/products/aquaticus/piggymeter-kit/>`_.
 
 Features
 ********
