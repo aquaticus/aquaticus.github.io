@@ -87,7 +87,7 @@ PiggyMeter hardware can work with many different meters that utilize optical int
 You can try to use alternative software that may add support to different meters.
 It's important to note that there's no assurance it will function seamlessly with PiggyMeter. For support, please reach out to the original author.
 
-* DLMS/COSEM Esphome module https://github.com/viric/esphome-ziv
+* **DLMS/COSEM Esphome module** https://github.com/viric/esphome-ziv
 
 Bill of materials
 *****************
