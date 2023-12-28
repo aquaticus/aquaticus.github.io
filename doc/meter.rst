@@ -373,6 +373,11 @@ This may indicate:
 * The interface isn't properly aligned with the optical interface of a meter.
 * The meter is not compatible.
 
+Make sure that the optical interface is positioned parallel to the front surface 
+of the housing. If the device works when attached to the meter without the housing, 
+but doesn't work after being inserted into the housing, this could be the issue. 
+In such a case, you may also consider **enlarging** the two holes in the housing. 
+
 Not all sensors received data
 -----------------------------
 
