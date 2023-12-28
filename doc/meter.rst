@@ -290,6 +290,12 @@ Build and flash the firmware
 The command above flashes the firmware and show monitor output.
 By default, the interface reads data from a meter every 1 minute.
 
+.. note:: 
+
+    For ESP32-S2 board you must press BOOT button and than RESET button on PCB to
+    enter programming mode. In addition, you can see an error message after flashing -- just ignore it.
+
+
 .. code-block:: console
     :caption: Sample meter readout in the log
 
