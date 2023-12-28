@@ -59,6 +59,26 @@ The meter must be compatible with `International Standard IEC 62056-21:2002 <htt
 
     Characteristic metal ring and optical interface in the middle.
 
+Meters reported to work with PiggyMeter
+----------------------------------------
+
+The list is created based on user's reports. No guarantee it is accurate.
+
+.. hlist::
+    :columns: 4
+
+    * Apator Norax 3
+    * Apator Norax 1
+    * Pafal 12EA5
+    * Iskra MT372
+    * Iskra ME372
+    * Kastrup 382
+
+.. note::
+
+    Feel free to send an email to info@aquaticus.info if you know the meter
+    that works with PiggyMeter but is not listed above.
+
 Bill of materials
 *****************
 
