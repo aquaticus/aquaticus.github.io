@@ -34,7 +34,7 @@ optical interface, the data frame format could be different.
 
 .. warning::
 
-    SML and DSML standards are not supported.
+    SML, DLMS and M-Bus standards are not supported by the software.
 
 How to check if the meter is supported?
 ---------------------------------------
@@ -78,6 +78,16 @@ The list is created based on user's reports. No guarantee it is accurate.
 
     Feel free to send an email to info@aquaticus.info if you know the meter
     that works with PiggyMeter but is not listed above.
+
+Alternative software
+--------------------
+
+PiggyMeter hardware can work with many different meters that utilize optical interface. However, the software currently supports only one standard, practicality limiting the range of supported meters.
+
+You can try to use alternative software that may add support to different meters.
+It's important to note that there's no assurance it will function seamlessly with PiggyMeter. For support, please reach out to the original author.
+
+* DLMS/COSEM Esphome module https://github.com/viric/esphome-ziv
 
 Bill of materials
 *****************
