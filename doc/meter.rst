@@ -73,6 +73,7 @@ The list is created based on user's reports. No guarantee it is accurate.
     * Iskra MT372
     * Iskra ME372
     * Kastrup 382
+    * Landis+Gyr E350 ZMF110
 
 .. note::
 
