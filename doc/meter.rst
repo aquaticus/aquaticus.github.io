@@ -34,7 +34,7 @@ optical interface, the data frame format could be different.
 
 .. warning::
 
-    SML, DLMS and M-Bus standards are not supported by the software.
+    SML, DLMS, M-Bus and ANSI C12.18/19 standards are not supported by the software.
 
 How to check if the meter is supported?
 ---------------------------------------
