@@ -90,6 +90,8 @@ log for ``iec62056`` component and observe the log output. Sample output:
 
     Sensor OBIS code must match exactly what is transmitted from a meter. This is the part before the first bracket ``(``.
 
+    If an OBIS code is only two digits, you should use quotes; for example, ``"1.2"`` instead of just ``1.2``.
+
 For a list of OBIS codes for electric meters, you can visit:
 
 * `<https://www.promotic.eu/en/pmdoc/Subsystems/Comm/PmDrivers/IEC62056_OBIS.htm>`_
