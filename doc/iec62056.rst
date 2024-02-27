@@ -162,7 +162,7 @@ To use the component you must define ``iec62056`` platform section in the config
     # Example platform configuration entry for bidirectional communication
     iec62056:
       update_interval: 60s
-      baud_rate: 9600
+      baud_rate_max: 9600
       battery_meter: False
 
 .. code-block:: yaml
