@@ -23,6 +23,7 @@ Features
 * **Uses open source ESPHome**
 * **Wireless communication via Wi-Fi**
 * **Integrates with Home Assistant**
+* **Optional web server**
 * **Cheap hardware ESP32-C3 or ESP32-S2**
 * **Case design available for 3D print**
 
@@ -360,6 +361,22 @@ This is a list of sensors defined in configuration file.
     :align: left
     :scale: 60%
     :figwidth: 100%
+
+Standalone mode
+***************
+PiggyMeter can operate independently of Home Assistant, offering the capability 
+to activate a web server. This server displays data readouts directly in a web 
+browser and offers a simple REST API.
+
+To activate the web server, include the following lines in the configuration file:
+
+.. code-block:: yaml
+    :caption: Enable web server
+
+    web_server:
+      port: 80
+
+More information about web server can be found in `ESPHome documentation <https://esphome.io/components/web_server.html>`_.
 
 Modifications
 *************
