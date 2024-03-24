@@ -126,7 +126,7 @@ You need a board with Espressif chip installed and compatible Wemos/Lolin pinout
 The size of the PCB is also critical. 3D printed case matches only boards (or their clones) listed below:
 
 * Lolin/Wemos S2 mini
-* Lolin/Wemos C2 mini 
+* Lolin/Wemos C3 mini 
 
 In theory, you can use any other CPU board with compatible pinout, notable ESP32 and ESP8266 D1 mini.
 But in that case you must design your own case and modify a bit configuration files
@@ -167,7 +167,7 @@ You can buy assembled interface on Tindie.
 Case
 ----
 
-Download files for 3D printer from https://github.com/aquaticus/piggymeter_case.
+Download files for 3D printer from https://github.com/aquaticus/piggymeter_case. Use V5 version for the latest design.
 
 .. figure:: images/case.png
     :align: center
