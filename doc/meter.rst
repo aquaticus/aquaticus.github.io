@@ -491,3 +491,21 @@ Lowering the maximum baud rate should help.
 
     iec62056:
       baud_rate_max : 4800
+
+Received meter identification but to transmission
+-------------------------------------------------
+
+.. code-block:: bash
+    :caption: Error log
+
+    [D][iec62056.component:174]: Meter identification: '/XXX6\2YYYYYYY'
+    [D][iec62056.component:252]: The meter is indicating mode E, which is unsupported. Attempting mode C. This will work for meters supporting both mode E and C.
+    [E][iec62056.component:268]: No transmission from meter.
+
+The meter identification string is successfully received, but there is no data transmission.
+Additionally, the log displays a message stating, "The meter is indicating mode E."
+
+The meter operates exclusively in mode E, which PiggyMeter does not support. Consequently, 
+the software attempts to switch the meter to mode C, but this attempt fails. 
+
+If a meter supports both mode E and C, the system should function correctly.
