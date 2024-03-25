@@ -1,7 +1,7 @@
 project = 'Aquaticus'
 copyright = '2023, 2024 Aquaticus'
 author = 'aquaticus'
-extensions = ['sphinx_copybutton', 'sphinx.ext.intersphinx', 'sphinxext.opengraph', 'sphinxcontrib.youtube', 'sphinxcontrib.googleanalytics']
+extensions = ['sphinx_copybutton', 'sphinx.ext.intersphinx', 'sphinxext.opengraph', 'sphinxcontrib.youtube']
 templates_path = ['_templates']
 exclude_patterns = []
 html_theme = 'sphinx_rtd_theme'
@@ -12,4 +12,3 @@ intersphinx_mapping = {
     "esphome": ("https://esphome.io/", None),
 }
 intersphinx_disabled_reftypes = ["*"]
-googleanalytics_id = 'G-JRE9G79CC5'
