@@ -66,13 +66,13 @@ Meters reported to work with PiggyMeter
 The list is created based on user's reports. No guarantee it is accurate.
 
 .. hlist::
-    :columns: 4
+    :columns: 3
 
     * `Apator Norax 3 <https://www.apator.com/en/our-solutions/electricity/electricity-metering/electronic-meters/norax-3>`_
     * `Apator Norax 1 <https://www.apator.com/en/our-solutions/electricity/electricity-metering/electronic-meters/norax-1>`_
     * Pafal 12EA5
     * Iskra MT372
-    * Iskra ME372
+    * Iskra ME162
     * Kastrup 382
     * Landis+Gyr E350 ZMF110
     * `ZPA <https://www.zpa.cz/en/home/>`_ `ZE110.D0 <https://www.premereni.cz/cs/dulezite-informace/montaz-elektromeru/prehled-instalovanych-elektromeru/ze110d0/>`_
