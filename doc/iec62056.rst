@@ -273,20 +273,21 @@ which part of the readout is reported and even send the entire data record back 
     # Data record:
     # 1-0:15.6.0(00000006000.385*kW)(2000-01-01 20:10:30)
 
-    - platform: iec62056
-      obis: 1-0:15.6.0
-      group: 2 # "2000-01-01 20:10:30"
-      name: Date time
+    text_sensor:
+      - platform: iec62056
+        obis: 1-0:15.6.0
+        group: 2 # "2000-01-01 20:10:30"
+        name: Date time
 
-    - platform: iec62056
-      obis: 1-0:15.6.0
-      group: 1 # "00000006000.385"
-      name: Value
+      - platform: iec62056
+        obis: 1-0:15.6.0
+        group: 1 # "00000006000.385"
+        name: Value
 
-    - platform: iec62056
-      obis: 1-0:15.6.0
-      group: 0 # "1-0:15.6.0(00000006000.385*kW)(2000-01-01 20:10:30)"
-      name: The entire record
+      - platform: iec62056
+        obis: 1-0:15.6.0
+        group: 0 # "1-0:15.6.0(00000006000.385*kW)(2000-01-01 20:10:30)"
+        name: The entire record
 
 Configuration variables
 +++++++++++++++++++++++
