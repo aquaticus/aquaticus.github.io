@@ -103,8 +103,8 @@ Available only on ESP32 based chips.
 
 - ``1.3.9999.32.1.0``: Heap size
 - ``1.3.9999.32.2.0``: Free heap
-- ``1.3.9999.32.2.0``: Minimum free heap
-- ``1.3.9999.32.2.0``: Maximum allocated heap
+- ``1.3.9999.32.3.0``: Minimum free heap
+- ``1.3.9999.32.4.0``: Maximum allocated heap
 
 
 ESP8266 heap
@@ -113,8 +113,8 @@ ESP8266 heap
 Available only for ESP8266 chips.
 
 - ``1.3.9999.8266.1.0``: Free heap
-- ``1.3.9999.8266.2.0```: Heap fragmentation in percents
-- ``1.3.9999.8266.2.0``: Maximum size of the free heap block
+- ``1.3.9999.8266.2.0``: Heap fragmentation in percents
+- ``1.3.9999.8266.3.0``: Maximum size of the free heap block
 
 
 Chip
