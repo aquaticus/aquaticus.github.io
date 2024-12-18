@@ -19,6 +19,7 @@ Features
 ********
 
 * **Supports IEC62056-21 based protocols**
+* **Supports passive SML protocol using ESPHome native component**
 * **Multiple meters: energy, water, thermal, and more**
 * **Uses open source ESPHome**
 * **Wireless communication via Wi-Fi**
@@ -33,9 +34,11 @@ For details see :doc:`iec62056`.
 Note that there are many variations of the protocol. Although the meter may use the same 
 optical interface, the data frame format could be different. 
 
+In addition, it supports meters that use SML (Smart Message Language) protocol using ESPHome `SML component <https://esphome.io/components/sml.html>`_.
+
 .. warning::
 
-    SML, DLMS, M-Bus and ANSI C12.18/19 standards are not supported by the software.
+    DLMS, M-Bus and ANSI C12.18/19 standards are not supported by the software.
 
 How to check if the meter is supported?
 ---------------------------------------
@@ -60,6 +63,9 @@ The meter must be compatible with `International Standard IEC 62056-21:2002 <htt
 
     Characteristic metal ring and optical interface in the middle.
 
+For SML protocol, look for SML logo on the meter or check the manual. ESPHome component only supports passive mode, it does not
+send any requests to the meter. In that mode, the meter sends data every few seconds.
+
 Meters reported to work with PiggyMeter
 ----------------------------------------
 
@@ -70,12 +76,14 @@ The list is created based on user's reports. No guarantee it is accurate.
 
     * `Apator Norax 3 <https://www.apator.com/en/our-solutions/electricity/electricity-metering/electronic-meters/norax-3>`_
     * `Apator Norax 1 <https://www.apator.com/en/our-solutions/electricity/electricity-metering/electronic-meters/norax-1>`_
+    * Apator Norax 1D via SML component
     * Pafal 12EA5
     * Iskra MT372
     * Iskra ME162
     * Kastrup 382
     * Landis+Gyr E350 ZMF110
     * `ZPA <https://www.zpa.cz/en/home/>`_ `ZE110.D0 <https://www.premereni.cz/cs/dulezite-informace/montaz-elektromeru/prehled-instalovanych-elektromeru/ze110d0/>`_
+
 
 .. note::
 
@@ -91,6 +99,7 @@ You can try to use alternative software that may add support to different meters
 It's important to note that there's no assurance it will function seamlessly with PiggyMeter. For support, please reach out to the original author.
 
 * **DLMS/COSEM Esphome module** https://github.com/viric/esphome-ziv
+* **SML Esphome module** https://esphome.io/components/sml.html
 
 Bill of materials
 *****************
@@ -218,8 +227,8 @@ Arrange the components within the case in this order:
 ..  youtube:: fM2LyJJWQHA
     :align: center
 
-Programming
-***********
+Programming for IEC62056-21 meters
+**********************************
 
 Begin by installing `ESPHome <https://esphome.io/index.html>`_.
 
@@ -323,6 +332,22 @@ By default, the interface reads data from a meter every 1 minute.
     [12:21:29][D][iec62056.component:524]: Data: 1-0:15.6.0(00000006000.385*kW)(2000-01-01 20:10:01)
 
 
+Programming for SML meters
+**************************
+
+The first steps are identical to those for IEC62056-21 meters.
+
+After cloning the repository and creating the `secrets.yaml` file, use configuration files for SML meters.
+
+.. code-block:: bash
+    :caption: Build for S2 target 
+
+    esphome run piggymeter-s2-sml.yaml
+
+Most likely, you will need to adjust the configuration file to match the data points transmitted by the meter.
+It is also worth to verify the baud rate and data bits of the serial port.
+
+
 Home Assistant
 **************
 
@@ -395,8 +420,10 @@ your meter, enable `DEBUG` logging for the `iec62056` component and
 analyze the log output.
 
 
-Diagnostic and Problems
-***********************
+Diagnostic and Problems IEC62056-21
+***********************************
+
+This section is only for IEC62056-21 meters (not SML).
 
 After flashing the firmware, the device will attempt to read data 
 from a meter after approximately 15 seconds. If the transmission 
